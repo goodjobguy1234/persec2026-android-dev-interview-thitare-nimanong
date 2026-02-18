@@ -34,17 +34,17 @@ fun romanNumeralsToInt(roman: String): Int {
     var total = 0
 
     for (i in roman.indices) {
-        val current = romanTable[roman[i].toString()] ?: 0
+        val currentValue = romanTable[roman[i].toString()] ?: 0
 
         if (i < roman.length - 1) {
-            val next = romanTable[roman[i + 1].toString()] ?: 0
-            if (current < next) {
-                total -= current
+            val nextValue = romanTable[roman[i + 1].toString()] ?: 0
+            if (currentValue < nextValue) {
+                total -= currentValue
             } else {
-                total += current
+                total += currentValue
             }
         } else {
-            total += current
+            total += currentValue
         }
     }
     return total
