@@ -8,11 +8,12 @@ region vpn -> format <country><number>
 
 fun question2(arrayString: Array<String>): Array<String> {
     return arrayString.toList().sortedWith(
-        compareBy<String> { it.takeWhile { ch -> ch.isLetter() } }
-            .thenBy {
+        compareBy<String> { it.takeWhile {
+                ch -> ch.isLetter()
+        } }.thenBy {
                 it.dropWhile { ch -> ch.isLetter() }.takeWhile {
                     it.isDigit()
-                }.toInt()
+                }.toIntOrNull() ?: 0
             }
     ).toTypedArray()
 }
