@@ -32,17 +32,17 @@ fun tribonacci(initial: Array<Int>, numberFibo: Int): Array<Int> {
 
 fun main(args: Array<String>) {
     val testCase1 = listOf(1, 3, 5).toTypedArray()
-    println(tribonacci(testCase1, 5))
+    println(tribonacci(testCase1, 5).toList())
 
     val testCase2 = listOf(2, 2, 2).toTypedArray()
-    println(tribonacci(testCase2, 3))
+    println(tribonacci(testCase2, 3).toList())
 
     val testCase3 = listOf(10, 10, 10).toTypedArray()
-    println(tribonacci(testCase3, 4))
+    println(tribonacci(testCase3, 4).toList())
 
     val testCase4 = emptyArray<Int>()
-    println(tribonacci(testCase4, 4))
+    println(tribonacci(testCase4, 4).toList())
 
     val testCase5 = listOf(10).toTypedArray()
-    println(tribonacci(testCase5, 4))
+    println(tribonacci(testCase5, 4).toList())
 }
