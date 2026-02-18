@@ -18,10 +18,9 @@ question test case:
 "{" => false
  */
 
-//todo write test and handle edge case if number is negative
 fun correctParenthesis(stringParenthesis: String): Boolean {
     // if not even then it not possible
-    if ((stringParenthesis.length % 2) != 0) {
+    if ((stringParenthesis.length % 2) != 0 || stringParenthesis.isEmpty()) {
         return false
     }
 
