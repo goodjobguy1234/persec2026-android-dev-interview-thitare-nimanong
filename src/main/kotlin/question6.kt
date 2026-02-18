@@ -12,7 +12,7 @@ f([2], 0) --> [2]] ? --> assumption error? result < actual fibo
  */
 
 
-fun tribonacci(initial: List<Int>, numberFibo: Int): List<Int> {
+fun tribonacci(initial: Array<Int>, numberFibo: Int): Array<Int> {
     val n = numberFibo - initial.size
     val modifiedList = initial.toMutableList()
     if (initial.size < 3) return initial
@@ -27,22 +27,22 @@ fun tribonacci(initial: List<Int>, numberFibo: Int): List<Int> {
             modifiedList.add(newValue)
         }
     }
-    return modifiedList
+    return modifiedList.toTypedArray()
 }
 
 fun main(args: Array<String>) {
-    val testCase1 = listOf(1, 3, 5)
+    val testCase1 = listOf(1, 3, 5).toTypedArray()
     println(tribonacci(testCase1, 5))
 
-    val testCase2 = listOf(2, 2, 2)
+    val testCase2 = listOf(2, 2, 2).toTypedArray()
     println(tribonacci(testCase2, 3))
 
-    val testCase3 = listOf(10, 10, 10)
+    val testCase3 = listOf(10, 10, 10).toTypedArray()
     println(tribonacci(testCase3, 4))
 
-    val testCase4 = emptyList<Int>()
+    val testCase4 = emptyArray<Int>()
     println(tribonacci(testCase4, 4))
 
-    val testCase5 = listOf(10)
+    val testCase5 = listOf(10).toTypedArray()
     println(tribonacci(testCase5, 4))
 }
